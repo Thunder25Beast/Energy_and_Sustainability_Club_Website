@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Summer School - Energy & Sustainability Club</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            /* Changed to 1200px to better fit 3 cards */
+            max-width: 1200px; 
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #4dd0e1;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #4dd0e1;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        .repo-notice {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #ffeb3b;
+            font-style: italic;
+            margin-bottom: 3rem;
+        }
+
+        /* --- New Card Grid Styles --- */
+
+        .year-section h2 {
+            color: #f0f0f0;
+            border-bottom: 2px solid #4dd0e1;
+            padding-bottom: 0.5rem;
+            margin-top: 3rem; /* More space between years */
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .course-grid {
+            display: grid;
+            /* Creates 3 equal-width columns */
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 1.5rem; /* Space between cards */
+        }
+
+        .course-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 300px; /* Fixed height for 1:1 posters */
+            object-fit: cover;
+            border-bottom: 1px solid #333;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Makes card content fill space */
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #4dd0e1;
+            flex-grow: 1; /* Pushes button to bottom */
+        }
+
+        .card-button {
+            display: block;
+            background-color: #4dd0e1;
+            color: #121212;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+        .card-button:hover {
+            background-color: #88ffff;
+            text-decoration: none;
+        }
+        .card-button.disabled {
+            background-color: #555;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        /* Responsive behavior for smaller screens */
+        @media (max-width: 992px) {
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            }
+        }
+        @media (max-width: 600px) {
+            .course-grid {
+                grid-template-columns: 1fr; /* 1 column */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="events.html" class="back-link">&larr; Back to Events</a>
+        <h1>Technical Summer School</h1>
+        
+        <p class="intro">4-week long summer courses curated by our team, covering topics that matter.</p>
+        
+        <div class="year-section">
+            <h2>2025 Courses</h2>
+            <div class="course-grid">
+                
+                <div class="course-card">
+                    <img src="images/posters/tss-solar-energy.jpg" alt="Solar Energy Course Poster">
+                    <div class="card-content">
+                        <h3>Solar Energy</h3>
+                        <a href="#" class="card-button" target="_blank" rel="noopener noreferrer">Download Slides</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/posters/tss-carbon-capture-2025.jpg" alt="Carbon Capture Course Poster">
+                    <div class="card-content">
+                        <h3>Carbon Capture</h3>
+                        <a href="#" class="card-button" target="_blank" rel="noopener noreferrer">Download Slides</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/posters/tss-carbon-trading.jpg" alt="Carbon Trading Course Poster">
+                    <div class="card-content">
+                        <h3>Carbon Trading</h3>
+                        <a href="#" class="card-button" target="_blank" rel="noopener noreferrer">Download Slides</a>
+                    </div>
+                </div>
+
+            </div> </div> <div class="year-section">
+            <h2>2024 Courses</h2>
+            <div class="course-grid">
+                
+                <div class="course-card">
+                    <img src="images/posters/tss-carbon-capture-2024.jpg" alt="Carbon Capture Course Poster">
+                    <div class="card-content">
+                        <h3>Carbon Capture</h3>
+                        <a href="#" class="card-button disabled" onclick="return false;">Slides Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/posters/tss-smart-grids.jpg" alt="Smart Grids Course Poster">
+                    <div class="card-content">
+                        <h3>Smart Grids</h3>
+                        <a href="#" class="card-button" target="_blank" rel="noopener noreferrer">Download Slides</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/posters/tss-circular-economy.jpg" alt="Circular Economy Course Poster">
+                    <div class="card-content">
+                        <h3>Circular Economy</h3>
+                        <a href="#" class="card-button"s" target="_blank" rel="noopener noreferrer">Download Slides</a>
+                    </div>
+                </div>
+
+            </div> </div> </div>
+</body>
+</html>
